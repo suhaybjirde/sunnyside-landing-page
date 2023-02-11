@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+/* font-family: 'Barlow', sans-serif;
+font-family: 'Fraunces', serif; */
+:root {
+    --clr-primery-100: hsl(7, 99%, 70%);
+    --clr-primery-200: hsl(51, 100%, 49%);
+    --clr-primery-300: hsl(167, 40%, 24%);
+    --clr-primery-400: hsl(198, 62%, 26%);
+    --clr-primery-500: hsl(168, 34%, 51%);
+
+
+    --clr-neutral-50: rgba(255, 255, 255, 0.3);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-200: hsl(210, 4%, 67%);
+    --clr-neutral-300: hsl(232, 10%, 55%);
+    --clr-neutral-350: hsl(232, 10%, 47%);
+    --clr-neutral-400: hsl(213, 9%, 39%);
+    --clr-neutral-500: hsl(212, 27%, 19%);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    line-height: 1.5;
+    font-family: 'Barlow', sans-serif;
+}
+/* reset */
+h1, h2, h3, h4, .focus a,  .learn-more, .name {
+    font-family: 'Fraunces', serif;
+}
+
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+/* utilities */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.section-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text-wrapper {
+    max-width: 400px;
+}
+.section-title {
+    font-size: clamp(2.2rem, 5vw, 2.8rem);
+    color: var(--clr-neutral-500);
+}
+.text {
+    margin: 25px 0;
+    color: var(--clr-neutral-300);
+}
+.learn-more {
+    font-weight: 700;
+    color: var(--clr-neutral-500);
+    font-size: 1.3rem;
+    position: relative;
+    padding: 0 5px;
+}
+.learn-more::before {
+    bottom: 1px;
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: -0px;
+    height: 7px;
+    border-radius: 100vh;
+    z-index: -1;
+}
+.project-info {
+    max-width: 300px;
+    text-align: center;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.project-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--clr-neutral-400);
+}
+.project-text {
+    color: var(--clr-neutral-350);
+    margin-top: 15px;
+}
+.graphic-design, .photography {
+    position: relative;
+}
+/* header */
+.header {
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+.header .header-nav ul {
+    display: flex;
+    gap: 20px;
+}
+.header .header-nav ul li a{
+    color: var(--clr-neutral-100);
+}
+.header .header-nav ul .focus a {
+    color: var(--clr-neutral-500);
+    padding: 10px 20px;
+    border-radius: 100vh;
+    background-color: var(--clr-neutral-100);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: .3s;
+}
+.header .header-nav ul .focus a:hover {
+    background-color: var(--clr-neutral-50);
+    color: var(--clr-neutral-100);
+}
+.header .humberger-menu {
+    display: none;
+}
+/* showcase */
+.showcase {
+    height: 95vh;
+    background: url(/images/desktop/image-header.jpg) no-repeat center bottom/cover;
+    display: flex;
+}
+.showcase .title {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--clr-neutral-100);
+    letter-spacing: 5px;
+    text-align: center;
+}
+.showcase img {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 250px;
+}
+/* services */
+#services, #audience, #projects {
+    height: 80vh;
+}
+#services .learn-more::before {
+    background-color: var(--clr-primery-200);
+}
+#services .section-image {
+    background: url(/images/desktop/image-transform.jpg) no-repeat center center/cover;
+}
+/* audience */
+
+#audience .section-image {
+    background: url(/images/desktop/image-stand-out.jpg) no-repeat center center/cover;
+}
+#audience  .learn-more::before {
+    background-color: var(--clr-primery-100);
+}
+/* projects */
+.graphic-design {
+    background: url(/images/desktop/image-graphic-design.jpg) no-repeat center center/cover;
+}
+.photography {
+    background: url(/images/desktop/image-photography.jpg) no-repeat center center/cover;
+}
+/* testimodial */
+.testimonial {
+    min-height: 100vh;
+    /* position: relative; */
+    display: grid;
+    grid-template-rows: 110px;
+}
+.testimonial-title {
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--clr-neutral-300);
+    text-align: center;
+    padding-top: 80px;
+}
+.clients {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+.client {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    text-align: center;
+}
+.client .logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.client .logo img {
+    width: 100%;
+}
+.client-said {
+    color: var(--clr-neutral-300);
+}
+.name {
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--clr-neutral-500);
+}
+.role {
+    color: var(--clr-neutral-200);
+    margin-top: 10px;
+}
+/* gallery */
+#gallery {
+    margin-top: 30px;
+}
+#gallery {
+    display: flex;
+}
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* footer */
+
+.footer {
+    height: 50vh;
+    background-color: var(--clr-primery-500);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.footer .logo img {
+    fill: red;
+}
+.footer-nav ul {
+    display: flex;
+    gap: 50px;
+}
+.footer-nav ul li a {
+    color: var(--clr-primery-400);
+    transition: .3s;
+}
+.social-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 1.2rem;
+}
+.social-icons a {
+    transition: .3s;
+    color: var(--clr-primery-400);
+}
+:is(.social-icons a, .footer-nav ul li a):hover {
+    color: var(--clr-neutral-100);
+}
+@media (max-width: 800px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .header-nav {
+        display: none;
+    }
+    .header .humberger-menu {
+        display: block;
+    }
+    .graphic-design, .photography, #services  {
+        height: 70vh;
+    }
+    #services .section-image {
+        order: 1;
+    }
+    #services .section-text {
+        order: 2;
+    }
+    .section-text {
+        padding: 2rem 1rem;
+    }
+    .graphic-design, .photography {
+        background-position: 50% 50%;
+    }
+    .project-info{
+        width: 95%;
+    }
+    .project-title {
+        font-size: 1.2rem;
+    }
+    #gallery {
+        flex-wrap: wrap;
+    }
+    .img-container {
+        flex-basis: 50%;
+        height: 200px;
+    }
+}

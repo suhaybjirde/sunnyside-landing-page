@@ -5,15 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
-  <title>Document</title>
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Sunnyside</title>
+  <script src="https://kit.fontawesome.com/6587c5242b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
+  <header class="header">
     <div class="logo">
-      <img src="images/logo.svg" alt="">
+      <img src="images/logo.svg" alt="logo">
     </div>
-    <nav class="header-nav">
+    <nav class="header-nav" data-state="">
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
@@ -22,7 +23,7 @@
       </ul>
     </nav>
     <div class="humberger-menu">
-      <img src="images/icon-hamburger.svg" alt="">
+      <a href=""><img src="images/icon-hamburger.svg" alt="control primary navigation"></a>
     </div>
   </header>
 
@@ -72,8 +73,8 @@
       </div>
     </section>
 
-    <section class="testimodial">
-      <h4 class="testimodial-title">Client testimonials</h4>
+    <section class="testimonial">
+      <h4 class="testimonial-title">Client testimonials</h4>
 
       <div class="clients">
 
@@ -115,7 +116,7 @@
       </div>
     </section>
 
-    <section class="grid">
+    <section id="gallery">
       <div class="img-container">
         <img src="images/desktop/image-gallery-milkbottles.jpg" alt="">
       </div>
@@ -132,9 +133,9 @@
 
   </main>
   
-  <footer>
+  <footer class="footer">
     <div class="logo">
-      <img src="images/logo.svg" alt="">
+      <img src="images/footer-logo.svg" alt="">
     </div>
     <nav class="footer-nav">
       <ul>
@@ -144,11 +145,12 @@
       </ul>
     </nav>
     <div class="social-icons">
-      <img src="images/icon-facebook.svg" alt="">
-      <img src="images/icon-instagram.svg" alt="">
-      <img src="images/icon-twitter.svg" alt="">
-      <img src="images/icon-pinterest.svg" alt="">
+      <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-pinterest"></i></a>
     </div>
   </footer>
+  <script src="js/main.js"></script>
 </body>
 </html>
